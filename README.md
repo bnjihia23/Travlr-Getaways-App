@@ -174,8 +174,6 @@ The mobile app includes:
 
 
 
-\- node\_modules folders have been removed to reduce file size.
-
 \- After downloading and unzipping, run 'npm install' in both travlr and travlr-mobile before starting.
 
 \- The backend must be running before starting the web or mobile apps.
