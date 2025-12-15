@@ -1,0 +1,13 @@
+<article class="card">
+  <h3>{{ trip.name }} ({{ trip.code }})</h3>
+  <p><strong>Resort:</strong> {{ trip.resort }}</p>
+  <p><strong>Start:</strong> {{ trip.start | date:'yyyy-MM-dd' }} · <strong>Length:</strong> {{ trip.length }}</p>
+  <p><strong>Per Person:</strong> {{ trip.perPerson }}</p>
+  <p *ngIf="trip.description?.length">
+    {{ trip.description.join(' ') }}
+  </p>
+  <div class="row" *ngIf="isLoggedIn()">
+    <button class="btn" (click)="editTrip()">Edit</button>
+    <button class="btn btn-warn" (click)="deleteTrip()">Delete</button>
+  </div>
+</article>

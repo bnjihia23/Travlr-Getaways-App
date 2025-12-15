@@ -1,0 +1,35 @@
+{{> header}}
+
+<div id="page">
+  <div id="contents">
+    <div class="box">
+      <div>
+        <div class="body">
+          <h1>{{title}}</h1>
+
+          <ul id="sites">
+            {{#each trips}}
+              <li>
+                <!-- Link each image and name to the API version of that trip -->
+                <a href="/api/trips/{{code}}">
+                  <img src="/images/{{image}}" alt="{{name}}">
+                </a>
+
+                <h2>
+                  <a href="/api/trips/{{code}}">{{name}}</a>
+                </h2>
+
+                {{#each description}}
+                  <p>{{this}}</p>
+                {{/each}}
+              </li>
+            {{/each}}
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{> footer}}

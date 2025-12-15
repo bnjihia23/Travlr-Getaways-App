@@ -1,0 +1,18 @@
+<h2>Add Trip</h2>
+<form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+  <div class="grid-2">
+    <label>Code <input formControlName="code" /></label>
+    <label>Name <input formControlName="name" /></label>
+    <label>Length <input formControlName="length" placeholder="e.g. 7 nights" /></label>
+    <label>Start <input formControlName="start" placeholder="YYYY-MM-DD" /></label>
+    <label>Resort <input formControlName="resort" /></label>
+    <label>Per Person <input formControlName="perPerson" /></label>
+    <label>Image <input formControlName="image" /></label>
+  </div>
+  <label>Description (one line per bullet)
+    <textarea formControlName="description" rows="4"></textarea>
+  </label>
+  <div *ngIf="error" class="error">{{ error }}</div>
+  <button class="btn" type="submit">Save</button>
+  <a routerLink="/" class="btn btn-ghost">Cancel</a>
+</form>

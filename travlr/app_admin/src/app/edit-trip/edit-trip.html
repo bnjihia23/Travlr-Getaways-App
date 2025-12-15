@@ -1,0 +1,18 @@
+<h2>Edit Trip – {{ tripCode }}</h2>
+<div *ngIf="loading">Loading…</div>
+<div *ngIf="error" class="error">{{ error }}</div>
+<form *ngIf="!loading && !error" [formGroup]="form" (ngSubmit)="submit()" novalidate>
+  <div class="grid-2">
+    <label>Name <input formControlName="name" /></label>
+    <label>Length <input formControlName="length" /></label>
+    <label>Start <input formControlName="start" /></label>
+    <label>Resort <input formControlName="resort" /></label>
+    <label>Per Person <input formControlName="perPerson" /></label>
+    <label>Image <input formControlName="image" /></label>
+  </div>
+  <label>Description (one line per bullet)
+    <textarea formControlName="description" rows="4"></textarea>
+  </label>
+  <button class="btn" type="submit">Save</button>
+  <a routerLink="/" class="btn btn-ghost">Cancel</a>
+</form>

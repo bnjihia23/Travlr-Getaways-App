@@ -1,0 +1,14 @@
+<header class="container">
+  <h1>Travlr Getaways Admin!</h1>
+  <nav style="margin: 8px 0;">
+    <a routerLink="/" style="margin-right: 12px;">Home</a>
+    <a routerLink="/add-trip" *ngIf="isLoggedIn()" style="margin-right: 12px;">Add Trip</a>
+    <a routerLink="/login" *ngIf="!isLoggedIn()" style="margin-right: 12px;">Login</a>
+    <a href="" (click)="logout(); $event.preventDefault();" *ngIf="isLoggedIn()">Logout</a>
+  </nav>
+  <hr />
+</header>
+
+<main class="container">
+  <router-outlet></router-outlet>
+</main>

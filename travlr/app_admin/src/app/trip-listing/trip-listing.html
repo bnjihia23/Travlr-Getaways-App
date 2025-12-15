@@ -1,0 +1,11 @@
+<div class="actions">
+  <a routerLink="/add-trip" class="btn" *ngIf="isLoggedIn()">+ Add Trip</a>
+  <a routerLink="/login" class="btn" *ngIf="!isLoggedIn()">Login to add trips</a>
+</div>
+
+<div *ngIf="loading">Loading…</div>
+<div *ngIf="error" class="error">{{ error }}</div>
+
+<div class="grid">
+  <app-trip-card *ngFor="let t of trips" [trip]="t"></app-trip-card>
+</div>
