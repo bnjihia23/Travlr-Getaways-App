@@ -1,4 +1,4 @@
-**Travlr Getaways – CS-499 Category 1 Artifact**
+**Travlr Getaways Full Stack Application**
 
 
 
