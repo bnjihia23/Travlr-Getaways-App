@@ -2,7 +2,7 @@
 
 
 
-This submission contains both the original Travlr Getaways full-stack web application and the enhanced mobile application built for Milestone Two.
+This submission contains both the original Travlr Getaways full-stack web application and the enhanced mobile application.
 
 
 
