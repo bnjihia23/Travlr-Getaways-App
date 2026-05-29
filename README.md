@@ -2,7 +2,7 @@
 
 
 
-This submission contains both the Travlr Getaways full-stack web application and the enhanced mobile application.
+This submission contains both the Travlr Getaways full-stack web application and the mobile application.
 
 
 
