@@ -1,186 +1,229 @@
-**Travlr Getaways Full Stack Application**
+# Travlr Getaways - Full Stack Travel Booking Platform
 
+## Overview
 
+Travlr Getaways is a full-stack travel management application that provides users with a web and mobile experience for browsing and managing travel packages. The system includes a RESTful backend API, a database-driven web application, an administrative dashboard, and a React Native mobile companion application.
 
-This submission contains both the Travlr Getaways full-stack web application and the mobile application.
+The project demonstrates full-stack application development, API integration, database design, authentication, and cross-platform software engineering principles.
 
+## Technologies Used
 
+### Frontend
+- Angular
+- React Native
+- Expo
+- HTML
+- CSS
+- TypeScript
 
+### Backend
+- Node.js
+- Express.js
+- REST APIs
+- JWT Authentication
+- Passport.js
 
+### Database
+- MongoDB
+- Mongoose
+- NoSQL Data Modeling
 
-**Project Structure**
+### Tools
+- Git/GitHub
+- NPM
+- Postman
+- Android/iOS Mobile Testing with Expo Go
 
 
+## Features
 
-travlr  (Full-stack web app)
+### Web Application
 
-travlr-mobile (Mobile companion app)
+- Dynamic travel package listings
+- Responsive user interface
+- Client-side routing
+- Integration with backend API services
 
+### Admin Dashboard
 
+- Secure administrator authentication
+- JWT-based access control
+- Create, update, and manage trip data
+- Protected API communication
 
+### Mobile Application
 
+- Cross-platform mobile experience using React Native
+- Trip listings retrieved from Express backend API
+- Detailed trip information screens
+- User login and registration
+- Persistent authentication using AsyncStorage
+- Favorites stored locally on device
+- Real-time search functionality
+- Bottom tab and stack navigation
 
-**Requirements:**
 
+## System Architecture
 
+The application follows a three-tier architecture:
 
-Before running either project, you will need:
+```
+Frontend Applications
+(Angular Web App + React Native Mobile App)
 
+            ↓
 
+REST API Layer
+(Node.js + Express)
 
-\- Node.js (v16+)
+            ↓
 
-\- NPM
+Database Layer
+(MongoDB)
+```
 
-\- MongoDB (local or cloud, e.g., MongoDB Atlas)
+The frontend applications communicate with the Express backend through RESTful API endpoints. The backend handles authentication, business logic, and database operations.
 
-\- Expo Go app (for mobile testing on a physical device)
 
+## Project Structure
 
+```
+Travlr-Getaways-App
 
+│
+├── travlr/
+│   ├── Express backend API
+│   ├── Angular web application
+│   ├── Admin dashboard
+│   └── MongoDB integration
+│
+└── travlr-mobile/
+    ├── React Native components
+    ├── Navigation
+    ├── Authentication
+    └── API services
+```
 
 
-**1. Backend (Express API)**
+## Installation and Setup
 
+### Requirements
 
+Install:
 
-How to Start the Backend:
+- Node.js v16+
+- NPM
+- MongoDB (local installation or MongoDB Atlas)
+- Expo Go mobile application
 
 
+## Backend Setup
 
-&nbsp;   cd travlr
+Navigate into the backend project:
 
-&nbsp;   npm install
+```bash
+cd travlr
+```
 
-&nbsp;   npm start
+Install dependencies:
 
+```bash
+npm install
+```
 
+Start the server:
 
-The Express server will start on the configured port (typically http://localhost:3000).
+```bash
+npm start
+```
 
+The Express API will run locally:
 
+```text
+http://localhost:3000
+```
 
 
+## Angular Web Application
 
+Navigate to the Angular application:
 
+```bash
+cd travlr/app_admin
+```
 
-**2. Consumer-Facing Angular Web App**
+Install dependencies:
 
+```bash
+npm install
+```
 
+Run:
 
-How to Start the Angular App:
+```bash
+npm start
+```
 
+Application:
 
+```text
+http://localhost:4200
+```
 
-&nbsp;   cd travlr/app_admin
 
-&nbsp;   npm install
+## Admin Login
 
-&nbsp;   npm start
+Default development credentials:
 
+```
+Username: admin
+Password: admin
+```
 
 
-The consumer-facing site will run at:
+## Mobile Application Setup
 
-&nbsp;   http://localhost:4200
+Navigate into the mobile project:
 
+```bash
+cd travlr-mobile
+```
 
+Install dependencies:
 
+```bash
+npm install
+```
 
+Start Expo:
 
-**3. Admin Dashboard (Angular)**
+```bash
+npx expo start
+```
 
+Scan the generated QR code using the Expo Go mobile app.
 
 
-The admin interface is part of the same Angular project.
+## Skills Demonstrated
 
+- Full-stack application architecture
+- REST API design and integration
+- Database modeling with MongoDB
+- CRUD operations
+- User authentication and authorization
+- Mobile application development
+- State management
+- Debugging and testing
+- Secure application design principles
 
 
-Access it at:
+## Future Improvements
 
-&nbsp;   http://localhost:4200/admin
+Potential future enhancements include:
 
-
-
-Default Admin Login:
-
-
-
-&nbsp;   username: admin
-
-&nbsp;   password: admin
-
-
-
-
-
-**4. Mobile App (React Native + Expo)**
-
-
-
-How to Start the Mobile App:
-
-
-
-&nbsp;   cd travlr-mobile
-
-&nbsp;   npm install
-
-&nbsp;   npx expo start
-
-
-
-This will display a QR code in your terminal.
-
-
-
-How to View the Mobile App:
-
-\- Install the Expo Go app (iOS or Android).
-
-\- Open Expo Go and scan the QR code.
-
-
-
-
-
-**5. Mobile App Features**
-
-
-
-The mobile app includes:
-
-
-
-\- Trip list pulled from the Express API
-
-\- Dynamic trip detail screen
-
-\- Favorites stored locally on the device
-
-\- Real-time search bar
-
-\- JWT login and registration
-
-\- Persistent authentication with AsyncStorage
-
-\- Bottom tab navigation + stack navigation
-
-
-
-
-
-**6. Notes**
-
-
-
-\- After downloading and unzipping, run 'npm install' in both travlr and travlr-mobile before starting.
-
-\- The backend must be running before starting the web or mobile apps.
-
-
-
-
-
-
-
+- Cloud deployment using AWS or Azure
+- CI/CD pipeline integration
+- Automated testing
+- Payment processing functionality
+- Advanced search and filtering
+- Expanded user profile management
